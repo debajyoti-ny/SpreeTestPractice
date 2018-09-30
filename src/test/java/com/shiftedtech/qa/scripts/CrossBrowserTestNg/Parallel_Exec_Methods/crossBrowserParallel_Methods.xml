@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Spree Login Test" parallel="methods" thread-count="3">
+    <test name="Spree Firefox Test">
+        <parameter name="browserName" value="firefox">
+            <classes>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Parallel_Exec_Methods.SpreeLoginTestNg_CB_Methods"> </class>
+            </classes>
+        </parameter>
+    </test>
+
+</suite>

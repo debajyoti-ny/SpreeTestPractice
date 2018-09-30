@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke Test Scenario" parallel="none">
+    <test name="Sprint 1">
+        <classes>
+            <class name="com.shiftedtech.qa.scripts.OtherTutorials.FailedTest_ReRun.SampleTest1"></class>
+            <class name="com.shiftedtech.qa.scripts.OtherTutorials.FailedTest_ReRun.SampleTest2"></class>
+            <class name="com.shiftedtech.qa.scripts.OtherTutorials.FailedTest_ReRun.SampleTest3"></class>
+        </classes>
+    </test>
+</suite>

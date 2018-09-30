@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Spree Login Test">
+    <test name="Spree Firefox Test">
+        <parameter name="browserName" value="firefox">
+            <classes>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Parallel_Exec_Tests.SpreeLoginWithDataDrivenTestNg_CB_Tests"> </class>
+            </classes>
+        </parameter>
+    </test>
+
+    <test name="Spree Chrome Test">
+        <parameter name="browserName" value="chrome">
+            <classes>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Parallel_Exec_Tests.SpreeLoginWithDataDrivenTestNg_CB_Tests"> </class>
+            </classes>
+        </parameter>
+    </test>
+
+    <test name="Spree IE Test">
+        <parameter name="browserName" value="ie">
+            <classes>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Parallel_Exec_Tests.SpreeLoginWithDataDrivenTestNg_CB_Tests"> </class>
+            </classes>
+        </parameter>
+    </test>
+
+</suite>

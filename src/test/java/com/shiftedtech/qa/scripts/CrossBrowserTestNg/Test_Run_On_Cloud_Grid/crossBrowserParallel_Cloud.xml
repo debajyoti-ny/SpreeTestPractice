@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Spree Login Test" parallel="tests" thread-count="6">
+    <test name="Spree Cloud Test">
+        <parameter name="browserName" value="cloud_win8.1_chrome_64">
+            <classes>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Test_Run_On_Cloud_Grid.SpreeLoginTestNg_CB_Cloud"> </class>
+            </classes>
+        </parameter>
+    </test>
+
+    <test name="Spree Grid Test">
+        <parameter name="browserName" value="cloud_win8.1_firefox_54">
+            <classes>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Test_Run_On_Cloud_Grid.SpreeLoginTestNg_CB_Cloud"> </class>
+            </classes>
+        </parameter>
+    </test>
+
+</suite>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.shiftedtech.qa</groupId>
+    <artifactId>SpreeTestPractice</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven-compiler.version>3.5</maven-compiler.version>
+        <selenium.version>3.8.1</selenium.version>
+        <webdrivermanager.version>2.1.0</webdrivermanager.version>
+        <cucumber.version>1.2.5</cucumber.version>
+        <testng.version>6.14.2</testng.version>
+        <poi.version>3.10-FINAL</poi.version>
+        <suiteXmlFile>jenkins_testng.xml</suiteXmlFile>
+    </properties>
+
+    <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+        </dependency>
+
+        <!-- Html-Unit WebDriver for Headless browser testing -->
+        <dependency>
+            <groupId>net.sourceforge.htmlunit</groupId>
+            <artifactId>webdriver</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+        <!-- PhantomJS Driver for Headless Browser Testing -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>phantomjsdriver</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
+        <!-- JUnit DataProvider -->
+        <dependency>
+            <groupId>com.tngtech.java</groupId>
+            <artifactId>junit-dataprovider</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+        </dependency>
+
+        <!-- JUnit Excel reader (Data Driven Testing) in Selenium -->
+        <dependency>
+            <groupId>net.sourceforge.jexcelapi</groupId>
+            <artifactId>jxl</artifactId>
+            <version>2.6.12</version>
+        </dependency>
+
+        <!-- Excel reader for POI (Data Driven Testing) in Selenium -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+
+        <!-- Assertion Library for test frameworks -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+        </dependency>
+
+        <!-- Extent Test Reports (Used by Ivaan) -->
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>3.1.3</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Extent Test Reports (Done by other sources - can do ScreenShot) -->
+        <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+        </dependency>
+
+        <!--FOR PAXO REPORTING-->
+        <dependency>
+            <groupId>com.paxovision</groupId>
+            <artifactId>paxo-reporter</artifactId>
+            <version>1.0.11</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java (Cucumber - Java) -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit (Cucumber - JUnit) -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <!-- TestNg Cucumber Runner -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <!-- To generate cucumber test reports in TestNg/Junit -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>3.14.0</version>
+        </dependency>
+
+        <!-- To generate cucumber test reports in TestNg/JUnit with Maven -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>maven-cucumber-reporting</artifactId>
+            <version>3.14.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+        <!-- To send emails via selenium-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>1.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <!-- Log4j Reporting -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <!-- MySQL Connector for Database Connection -->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.6</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <!-- The following "build" is to run tests from the Command Line using certain commands/syntax -->
+    <!-- Test builds using CLI are needed for Jenkins integration (i.e., running test w/ Jenkins) -->
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <fork>true</fork>
+                    <executable>C:\Program Files\Java\jdk1.8.0_111\bin\javac</executable>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId> <!-- Surefire plugin is used to run maven tests from command line -->
+                <version>2.20.1</version>
+
+                <configuration>
+                    <!-- The following is used for running a test with Jenkins (youtube video... but it's not running) -->
+                    <!--
+                        <suiteXmlFiles>
+                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                        </suiteXmlFiles>
+                    -->
+
+                    <!-- This is how we run a cucumber test with Junit (Junit Runner)
+                        <includes>
+                            <include>com.shiftedtech.qa.scripts.Hybrid_BDD_POM.runner.BDD_Runner_JUnit</include>
+                        </includes>
+                    -->
+
+                    <!-- This is how we run a cucumber test with TestNg (TestNg Functional Runner)
+                        <includes>
+                            <include>com.shiftedtech.qa.scripts.Hybrid_BDD_POM.runner.BDD_Runner_TestNg</include>
+                        </includes>
+                    -->
+
+                    <!-- This is how we run a cucumber test with TestNg (TestNg Suite Runner) -->
+                        <suiteXmlFiles>
+                            <suiteXmlFile>testng2.xml</suiteXmlFile>
+                        </suiteXmlFiles>
+
+                </configuration>
+            </plugin>
+
+            <!-- Used for generating advance reports in cucumber -->
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>3.8.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>SpreeTestPractice</projectName>  <!-- Replace with project name -->
+                            <outputDirectory>target/cucumber-test-report/advanced-reports</outputDirectory>
+                            <cucumberOutput>target/cucumber-test-report/cucumber-report.json</cucumberOutput> <!-- This json report is included in the BDDRunner class -->
+                            <buildNumber>1</buildNumber>
+                            <parallelTesting>false</parallelTesting>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

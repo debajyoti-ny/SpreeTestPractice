@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Spree Login Test" parallel="classes" thread-count="3">
+    <test name="Spree Firefox Test">
+        <parameter name="browserName" value="firefox">
+            <classes>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Parallel_Exec_Classes.SpreeLoginTestNg_CB_Class1"> </class>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Parallel_Exec_Classes.SpreeLoginTestNg_CB_Class2"> </class>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Parallel_Exec_Classes.SpreeLoginTestNg_CB_Class3"> </class>
+            </classes>
+        </parameter>
+    </test>
+
+    <test name="Spree Chrome Test">
+        <parameter name="browserName" value="chrome">
+            <classes>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Parallel_Exec_Classes.SpreeLoginTestNg_CB_Class1"> </class>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Parallel_Exec_Classes.SpreeLoginTestNg_CB_Class2"> </class>
+                <class name="com.shiftedtech.qa.scripts.CrossBrowserTestNg.Parallel_Exec_Classes.SpreeLoginTestNg_CB_Class3"> </class>
+            </classes>
+        </parameter>
+    </test>
+</suite>
